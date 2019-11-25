@@ -1,0 +1,110 @@
+import java.util.Scanner;
+public class innaopcja {
+ 
+	public static void main(String[] args) {
+ 
+		
+		System.out.println("Podaj Liczbę do sprawdzenia i wykonania na niej potęgi i pierwiastka");
+		
+		Scanner skan1 = new Scanner(System.in);       
+		int wartosc = skan1.nextInt();
+
+		Number.isOdd(wartosc); 					
+		Number.isEven(wartosc);					
+
+		Number.isSqrt(wartosc);					
+		
+		System.out.println("Podaj stopień potęgi: ");
+		
+		Scanner skan2 = new Scanner(System.in);    
+		int n2 = skan2.nextInt();
+
+		Number.isPow(wartosc,n2);				
+
+		Number.add(wartosc,n2);				
+		
+		Number.subtract(wartosc,n2);				
+
+	}
+ 
+}	
+ 
+class Number              
+{	
+	int x;
+		
+	Number(int wartosc)    
+	{
+		x = wartosc;			
+	}
+	
+
+ 
+ 
+	static void isOdd(int x) 
+	{
+		boolean parzysta;
+		
+		
+		if (x%2==0) 
+		{
+			parzysta = true;
+			System.out.println("Parzysta " + parzysta);			
+		}else 
+			parzysta = false;                      
+ 
+	}
+	
+	
+	static void isEven(int x)   
+	{
+		boolean nieparzysta;
+			
+		if (x%2!=0) 
+		{
+			nieparzysta = true;
+			System.out.println("Nieparzysta " + nieparzysta);
+		}else 
+			nieparzysta = false;
+		
+ 
+	}
+	
+	
+	static void isSqrt(int x)           
+	{
+		double pierwiastek;
+			
+		pierwiastek = Math.sqrt(x); 
+		System.out.println("Pierwiastek twojej liczby = " + pierwiastek);
+		
+	}
+	
+	static void isPow(int x, int y)        
+	{
+		double potega;
+			
+		potega = Math.pow(x,y); 
+		System.out.println("Potęga twojej liczby = " + potega);
+		
+	}
+	
+	
+	static void add(int x, int y)   
+	{
+		int suma;
+		suma = x + y;
+		System.out.println("Suma dwóch podanych przez ciebie liczb wynosi: " + suma);
+	}
+	
+	static void subtract(int x, int y)        
+	{
+		int roznica;
+		roznica = x - y;
+		System.out.println("Różnica dwóch podanych przez ciebie liczb wynosi: " + roznica);
+	}
+
+}
+
+
+
